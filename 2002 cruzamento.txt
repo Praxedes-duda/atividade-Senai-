@@ -1,0 +1,47 @@
+cruzamento 
+
+/*
+autor:maria eduarda praxedes 
+nome do progama: cruzamento 
+descricao: semaforo de cruzamento
+*/
+
+#define pinLedVerdeA 12
+#define pinLedAmareloA 13
+#define pinLedVermelhoA 11
+#define pinLedVerdeB 10
+#define pinLedAmareloB 9 
+#define pinLedVermelhoB 8
+#define tempoLigado 3000
+#define tempoLigado 2000
+#define tempoLigado 5000
+
+void setup()
+{
+ pinMode(pinLedVerdeA, OUTPUT);
+ pinMode(pinLedAmareloA, OUTPUT);
+ pinMode(pinLedVermelhoA, OUTPUT);
+ pinMode(pinLedVerdeB, OUTPUT);
+ pinMode(pinLedAmareloB, OUTPUT);
+ pinMode(pinLedVermelhoB, OUTPUT);
+}
+
+void loop()
+{
+  digitalWrite(pinLedVerdeA,HIGH);
+  digitalWrite(pinLedVermelhoB,HIGH);
+   delay(tempoLigado);
+  digitalWrite(pinLedVerdeA,LOW);
+  digitalWrite(pinLedAmareloA,HIGH);
+   delay(tempoLigado);
+  digitalWrite(pinLedAmareloA,LOW);
+  digitalWrite(pinLedVermelhoB,LOW);
+  digitalWrite(pinLedVerdeB,HIGH);
+  digitalWrite(pinLedVermelhoA,HIGH);
+   delay(tempoLigado);
+  digitalWrite(pinLedVerdeB,LOW);
+  digitalWrite(pinLedAmareloB,HIGH);
+   delay(tempoLigado);
+  digitalWrite(pinLedAmareloB,LOW);
+  digitalWrite(pinLedVermelhoA,LOW);
+}
